@@ -1,0 +1,22 @@
+<ion-footer>
+    <ion-toolbar color="primary">
+        <div class="tabs">
+            <div class="tab" [ngClass]="{ 'active' : segment === 'home' }" (click)="onTabSelected('home')" [routerLink]="'/main/home'" routerDirection="back">
+                <ion-icon name="home"></ion-icon>
+                <div class="label">Home</div>
+            </div>
+            <div class="tab" [ngClass]="{ 'active' : segment === 'customers' }" (click)="onTabSelected('customers')" [routerLink]="'/main/customers'" routerDirection="fordward">
+                <ion-icon name="people"></ion-icon>
+                <div class="label">Clientes</div>
+            </div>
+            <div class="tab" [ngClass]="{ 'active' : segment === 'account' }" (click)="onTabSelected('account')">
+                <ion-icon name="contact"></ion-icon>
+                <div class="label">Cuenta</div>
+            </div>
+            <div class="tab" [ngClass]="{ 'active' : segment === 'about' }" (click)="onTabSelected('about')" [routerLink]="'/about'" routerDirection="fordward">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <div class="label">Acerca de</div>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,99 @@
+<ion-content padding class="login auth-page">
+
+    <div class="auth-content">
+        <!-- Logo -->
+        <div padding-horizontal text-center>
+            <div class="logo"></div>
+            <h3 ion-no-margin>
+                <ion-text color="light" class="core-fontsize-w-700">
+                    <ion-text color="secondary">Create</ion-text>
+                </ion-text>
+            </h3>
+        </div>
+
+        <!-- Customer Create Form -->
+        <form [formGroup]="customerCreateForm" class="list-form">
+            <ion-item ion-padding class="animated fadeInUp">
+                <ion-label position="floating">
+                    <ion-icon name="mail" item-start></ion-icon>
+                    Nombre Completo
+                </ion-label>
+                <ion-input color="secondary" type="text" formControlName="fullName"></ion-input>
+            </ion-item>
+            <p ion-text class="core-fontsize-08" *ngIf="customerCreateForm.get('fullName').touched && customerCreateForm.get('fullName').hasError('required')">
+                <ion-text color="warning">
+                    Este campo es requerido
+                </ion-text>
+            </p>
+
+            <ion-item ion-padding class="animated fadeInUp">
+                <ion-label position="floating">
+                    <ion-icon name="mail" item-start></ion-icon>
+                    E-mail
+                </ion-label>
+                <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+            </ion-item>
+            <p ion-text class="core-fontsize-08" *ngIf="customerCreateForm.get('email').touched && customerCreateForm.get('email').hasError('required')">
+                <ion-text color="warning">
+                    Este campo es requerido
+                </ion-text>
+            </p>
+
+            <ion-item ion-padding class="animated fadeInUp">
+                <ion-label position="floating">
+                    <ion-icon name="lock" item-start></ion-icon>
+                    Contraseña
+                </ion-label>
+                <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <p ion-text color="warning" class="core-fontsize-08" *ngIf="customerCreateForm.get('password').touched && customerCreateForm.get('password').hasError('required')">
+                <ion-text color="warning">
+                    This field is required
+                </ion-text>
+            </p>
+        </form>
+
+        <div margin-top>
+            <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="signUp()" [disabled]="!customerCreateForm.valid" tappable>
+                <ion-icon name="log-in"></ion-icon>
+                Sign Up
+            </ion-button>
+
+            <p text-center>
+                <ion-text color="light">
+                    Or Sign Up with:
+                </ion-text>
+            </p>
+
+            <ion-grid class="btn-group">
+                <ion-row>
+                    <ion-col size="4">
+                        <ion-button shape="round" expand="full" fill="outline" color="tertiary">
+                            <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-button shape="round" expand="full" fill="outline" color="tertiary">
+                            <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-button shape="round" expand="full" fill="outline" color="tertiary">
+                            <ion-icon slot="icon-only" name="logo-googleplus"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </div>
+
+        <div text-center margin-top>
+            <span (click)="goToLogin()" tappable>
+                <ion-text color="light">
+                    <strong>I have an account!</strong>
+                </ion-text>
+            </span>
+        </div>
+
+    </div>
+</ion-content>

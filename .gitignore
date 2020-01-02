@@ -1,0 +1,123 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+# ionic project temp folders
+/.idea
+/.ionic
+/.sass-cache
+/.sourcemaps
+/.versions
+/.vscode
+/coverage
+/dist
+/node_modules
+/platforms
+/plugins
+/www
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+/client/bower_components
+/legacy-project/client/bower_components
+/legacy-project/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+log.txt
+npm-debug.log*
+UserInterfaceState.xcuserstate
+/.idea
+.project
+.classpath
+.c9/
+.settings/
+.gradle
+*.launch
+*.sublime-project
+*.sublime-workspace
+*.log
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+$RECYCLE.BIN/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+package-lock.json
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# logs
+logs
+*.log
+/legacy-project/_SYNCAPP
+
+# runtime data
+pids
+*.pid
+*.seed
+
+# compiled output
+/tmp
+/out-tsc
+/legacy-project/build
+
+# dist
+/output
+/public/__build__/
+/src/*/__build__/
+/__build__/**
+/.awcache
+.webpack.json
+/compiled/
+dll/
+android/
+ios/
+
+# typing #
+/src/typings/tsd/
+/typings/
+/tsd_typings/
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# doc #
+/doc/
+/documentation/
+
+# compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# users environment variables
+.lock-wscript

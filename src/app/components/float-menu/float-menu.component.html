@@ -1,0 +1,24 @@
+<ion-fab vertical="bottom" horizontal="center" slot="fixed" class="animated fadeInDown">
+    <ion-fab-button (click)="togglePopupMenu()">
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-icon name="apps"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+
+<div class="float-menu">
+    <div class="float-menu-overlay" [ngClass]="{'in': openMenu}"></div>
+    <div class="float-menu-panel" [ngClass]="{'in': openMenu}">
+        <div class="float-menu-item">
+            <ion-icon name="trending-up" slot="middle" size="large"></ion-icon>
+            <span>Registrar Oportunidad</span>
+        </div>
+        <div class="float-menu-item">
+            <ion-icon name="list-box" slot="middle" size="large"></ion-icon>
+            <span>Crear Factura</span>
+        </div>
+        <div class="float-menu-item">
+            <ion-icon name="checkbox-outline" slot="middle" size="large"></ion-icon>
+            <span>Mis Actividades</span>
+        </div>
+    </div>
+</div>

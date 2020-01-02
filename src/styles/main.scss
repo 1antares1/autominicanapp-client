@@ -1,0 +1,21 @@
+// variables
+@import "variables";
+
+// animations
+@import "animations";
+
+// material resources - always include only once per project
+@import "md/index";
+
+// mixins
+@import "mixins/index";
+
+// You have to define one of those for every theme you offer
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.app-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+
+body {
+    // core scss
+    @import "core/index";
+}

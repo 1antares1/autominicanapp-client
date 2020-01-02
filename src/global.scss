@@ -1,0 +1,133 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-item {
+    --ion-item-background: transparent;
+}
+
+/* Colors */
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-light {
+    background-color: var(--ion-color-light);
+}
+
+.bg-dark {
+    background-color: var(--ion-color-dark);
+}
+
+.bg-primary {
+    background-color: var(--ion-color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--ion-color-secondary);
+}
+
+.bg-tertiary {
+    background-color: var(--ion-color-tertiary);
+}
+
+/* Helpers */
+.core-fontsize-w-700 {
+    font-weight: 700 !important;
+}
+
+.core-fontsize-08 {
+    font-size: .8rem;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-primary {
+    color: var(--ion-color-primary);
+}
+
+.text-secondary {
+    color: var(--ion-color-secondary);
+}
+
+.text-dark {
+    color: var(--ion-color-dark);
+}
+
+/* Menu */
+/* MOVE TO USER_PROFILE */
+ion-toolbar.user-profile {
+    .user-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .item-inner {
+        border-width: 0;
+    }
+}
+
+/* Custom toolbar (overriding Shadow DOM) */
+ion-toolbar {
+    &.ion-color-primary {
+        --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
+    }
+}
+
+/* Card Show */
+/* Move to SASS Files */
+ion-card {
+    &.sc-ion-card-md-h {
+        box-shadow: 0 2px 4px rgba(var(--ion-color-dark-rgb), .24);
+    }
+}
+
+
+/* Custom Menu styles (overriding Shadow DOM) */
+/* Move to MAIN STYLES */
+ion-menu {
+    ion-header {
+        ion-toolbar {
+            &.ion-color-dark {
+                --ion-color-base: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary)) !important;
+            }
+        }
+    }
+}
+
+.core-bg-sidebar-menu {
+    background-image: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+}
+
+ion-menu {
+    --ion-background-color: var(--ion-color-primary-tint);
+}
+
+ion-ripple-effect {
+    background-color: var(--ion-color-secondary);
+}

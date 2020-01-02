@@ -1,0 +1,63 @@
+<ion-app>
+    <ion-split-pane contentId="menuContent">
+        <ion-menu contentId="menuContent">
+            <ion-header>
+                <ion-toolbar color="dark" class="user-profile">
+                    <ion-item ion-margin-bottom>
+                        <ion-avatar slot="start" class="user-avatar">
+                            <img src="assets/img/default-user-profile.jpg">
+                        </ion-avatar>
+                        <ion-label>
+                            <ion-text color="medium">
+                                <h1><strong>1antares1</strong></h1>
+                            </ion-text>
+                            <ion-text color="secondary">
+                                <h3>
+                                    República Dominicana
+                                </h3>
+                            </ion-text>
+                            <ion-menu-toggle class="core-flex-content-center padding-t-10p" auto-hide="false">
+                                <a class="core-fontsize-08" tappable (click)="goToEditProgile()">
+                                    <ion-text class="core-flex-content-center" color="medium">
+                                        <ion-icon name="contact"></ion-icon>
+                                        <strong>Mi Perfil</strong>
+                                    </ion-text>
+                                </a>
+                                <ion-text color="secondary">&nbsp;&nbsp;|&nbsp;&nbsp;</ion-text>
+                                <a class="core-fontsize-08" tappable (click)="logout()">
+                                    <ion-text class="core-flex-content-center" color="medium">
+                                        <ion-icon name="log-out"></ion-icon>
+                                        <strong>Cerrar sesión</strong>
+                                    </ion-text>
+                                </a>
+                            </ion-menu-toggle>
+                        </ion-label>
+                    </ion-item>
+
+                </ion-toolbar>
+            </ion-header>
+
+            <ion-content class="core-bg-sidebar-menu">
+                <ion-list>
+                    <ion-list-header color="dark">
+                        <ion-label>Menu</ion-label>
+                    </ion-list-header>
+
+                    <ion-menu-toggle auto-hide="false" *ngFor="let cs of componentSettings">
+                        <ion-item [routerLink]="[cs.url]" color="primary">
+                            <ion-icon slot="start" [name]="cs.icon" color="light"></ion-icon>
+                            <ion-label>
+                                {{cs.title}}
+                            </ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+
+        <!-- Container App -->
+        <ion-router-outlet id="menuContent"></ion-router-outlet>
+        <!-- End Container App -->
+
+    </ion-split-pane>
+</ion-app>

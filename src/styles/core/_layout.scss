@@ -1,0 +1,53 @@
+$core-default-label-color: #c3c3c3;
+$core-default-label-color-active: #ffffff;
+ion-header ion-icon {
+    font-size: 18px;
+}
+
+ion-toolbar .tabs {
+    display: flex;
+    justify-content: center;
+
+    .tab {
+        text-align: center;
+        width: calc(100% / 3);
+        color: $core-default-label-color;
+
+        &.active {
+            color: $core-default-label-color-active;
+        }
+
+        ion-icon {
+            font-size: 30px;
+        }
+
+        .label {
+            font-size: 10px;
+            margin-top: -2px;
+        }
+    }
+}
+
+ion-card.core-default-card {
+    margin: 15px;
+    padding: 10px;
+    z-index: 999;
+    &.__card-transparent {
+        background-color: #ffffffd9;
+    }
+}
+
+ion-content.core-default-content-wrapper {
+    --background-color: transparent;
+    &::after {
+        content: "";
+        background: url(/assets/img/default-main-wallpaper.jpg) 0 0/150% auto no-repeat;
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+      }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "autominicanapp-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
